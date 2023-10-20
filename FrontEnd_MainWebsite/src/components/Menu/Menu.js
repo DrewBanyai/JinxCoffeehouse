@@ -5,9 +5,9 @@ import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalCompon
 import { menuItems } from '../../constants/constants';
 
 const Menu = () => (
-  <Section nopadding id="menu">
+  <Section nopadding id="menu" style={{width: "100%"}}>
     <SectionDivider />
-    <SectionTitle main>Menu</SectionTitle>
+    <SectionTitle div>Menu</SectionTitle>
     <GridContainer>
       {menuItems.map((p, i) => {
         return (

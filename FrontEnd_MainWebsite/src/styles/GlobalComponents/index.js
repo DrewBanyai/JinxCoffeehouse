@@ -16,7 +16,7 @@ export const Section = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
+    padding: ${(props) => props.nopadding ? "0" : "8px 16px 0" } ;
 
     width: calc(100vw - 32px);
     flex-direction: column;
@@ -27,13 +27,13 @@ export const SectionTitle = styled.h2`
   font-weight: 800;
   font-size: ${(props) => props.main ? '65px' : '56px'};
   line-height: ${(props) => props.main ? '72px' : '56px'};
-  width: max-content;
+  min-width: max-content;
   max-width: 100%;
   background: linear-gradient(121.57deg, ${props => props.theme.colors.palette5} 18.77%, ${props => props.theme.colors.palette2} 60.15%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
-  padding: ${(props) => props.main ? '58px 0 16px' : '10px'};
+  padding: ${(props) => props.main ? '30px 0 16px' : '10px'};
 
   @media ${props => props.theme.breakpoints.md}{
     font-size: ${(props) => props.main ? '56px' : '48px'};
@@ -48,7 +48,7 @@ export const SectionTitle = styled.h2`
     font-size: ${(props) => props.main ? '28px' : '32px'};
     line-height: ${(props) => props.main ? '32px' : '40px'};
     margin-bottom: 8px;
-    padding: ${(props) => props.main ? '16px 0 8px' : '0'};
+    padding: ${(props) => props.main ? '8px 0 8px' : '0'};
     max-width: 100%;
   }
 `

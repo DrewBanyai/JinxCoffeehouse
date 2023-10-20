@@ -3,7 +3,7 @@ import React from 'react';
 import { CoffeeAnim, Steam1, Steam2, Steam3, CoffeeCup } from './CoffeeAnimationStyles';
 
 const CoffeeAnimation = () => (
-  <CoffeeAnim style={{position: "relative", left: "10%", width: "400px", height: "300px"}}>
+  <CoffeeAnim style={{position: "absolute", left: "10%", width: "400px", height: "300px"}}>
     <svg version="1.1" id="coffee" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <Steam1 d="M221.4,65.5l-4.9-6.2c-7.3-9.1-7.3-21.8,0-30.9c3.3-4.1,2.6-10.1-1.5-13.3c-4.1-3.3-10.1-2.6-13.3,1.5
         c-12.8,16.1-12.7,38.5,0,54.6l4.9,6.2c9.5,11.9,9.5,28.5,0,40.4l-5.1,6.4c-3.3,4.1-2.6,10.1,1.5,13.3c1.7,1.4,3.8,2.1,5.9,2.1

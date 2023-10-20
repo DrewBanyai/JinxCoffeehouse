@@ -10,11 +10,7 @@ export const Container = styled.div`
   padding-top: 2rem;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    display: flex;
   }
 `;
 export const Div1 = styled.div`
@@ -22,14 +18,17 @@ export const Div1 = styled.div`
   display: flex;
   flex-direction: row;
   align-content: center;
+
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 1 / 1 / 2 / 3;
   }
 `;
+
 export const Div2 = styled.div`
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
   justify-content: space-around;
+
   @media ${(props) => props.theme.breakpoints.sm} {
     grid-area: 2 / 2 / 3 / 5;
   }
@@ -39,6 +38,7 @@ export const Div3 = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   @media ${(props) => props.theme.breakpoints.sm} {
     align-items: center;
     grid-area: 1 / 4 / 2 / 6;
@@ -52,11 +52,13 @@ export const NavLink = styled.a`
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
   margin-bottom: 100px
+
   &:hover {
     color: #f0f;
     opacity: 1;
     cursor: pointer;
   }
+
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
   }
@@ -78,6 +80,7 @@ export const ContactDropDown = styled.button`
   &:focus {
     outline: none;
   }
+
   &:hover {
     color: #fff;
   }
@@ -85,6 +88,7 @@ export const ContactDropDown = styled.button`
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: 0.4rem 0;
   }
+
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 0;
   }
@@ -112,24 +116,30 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
 // Social Icons 
 
 export const SocialIcons = styled.a`
-transition: 0.3s ease;
-color: white;
-border-radius: 50px;
+  transition: 0.3s ease;
+  color: white;
+  border-radius: 50px;
   padding: 8px;
-&:hover {
+
+  &:hover {
     background-color: #212d45;
     transform: scale(1.2);
     cursor: pointer;
-    
   }
 `
 
 
 //  Header Links
 export const NavLinkLi = styled.li`
-cursor: pointer;
-a:hover {
+  cursor: pointer;
+  display: none;
+
+  a:hover {
     color: rgba(255, 255, 255, 1.0);
     backgroundcolor: yellow;
-}
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `

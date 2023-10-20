@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { LeftSection, TaglineText } from './HeroStyles';
+import CoffeeAnimation from '../BackgroundAnimation/CoffeeAnimation';
 
 const Hero = () => (
   <>
@@ -14,6 +15,7 @@ const Hero = () => (
           <TaglineText />
         </SectionText>
       </LeftSection>
+      {/*<CoffeeAnimation />*/}
     </Section>
   </>
 )

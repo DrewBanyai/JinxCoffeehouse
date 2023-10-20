@@ -1,5 +1,4 @@
 import Accomplishments from '../components/Accomplishments/Accomplishments';
-import CoffeeAnimation from '../components/BackgroundAnimation/CoffeeAnimation';
 import Hero from '../components/Hero/Hero';
 import Menu from '../components/Menu/Menu';
 import Space from '../components/Space/Space';
@@ -12,7 +11,6 @@ const Home = () => {
     <Layout>
       <Section grid>
         <Hero />
-        <CoffeeAnimation />
       </Section>
       <Menu />
       {/*<Space />*/}

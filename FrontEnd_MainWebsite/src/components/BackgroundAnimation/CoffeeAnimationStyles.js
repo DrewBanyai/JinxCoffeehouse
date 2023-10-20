@@ -19,6 +19,7 @@ export const CoffeeAnim = styled.div`
     --steam2-delay: 250ms;
     --steam3-delay: 50ms;
 
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,6 +32,7 @@ export const CoffeeAnim = styled.div`
 `
 
 export const Steam1 = styled.path`
+    overflow: hidden;
     fill: var(--steam-color);
     transform: translateY(var(--steam-start-height));
     animation: var(--steam-animation);
@@ -38,6 +40,7 @@ export const Steam1 = styled.path`
 `
 
 export const Steam2 = styled.path`
+    overflow: hidden;
     fill: var(--steam-color);
     transform: translateY(var(--steam-start-height));
     animation: var(--steam-animation);
@@ -45,6 +48,7 @@ export const Steam2 = styled.path`
 `
 
 export const Steam3 = styled.path`
+    overflow: hidden;
     fill: var(--steam-color);
     transform: translateY(var(--steam-start-height));
     animation: var(--steam-animation);
@@ -52,5 +56,6 @@ export const Steam3 = styled.path`
 `
 
 export const CoffeeCup = styled.path`
+    overflow: hidden;
     fill: var(--coffee-color);
 `

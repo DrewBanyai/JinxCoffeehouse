@@ -9,10 +9,10 @@ import { Container, Div1, Div2, Div3, NavLink, NavLinkLi, SocialIcons } from './
 
 const Header = () => (
   <Container>
-    <Div1 style={{marginBottom:"10px"}}>
+    <Div1 style={{marginBottom:"10px", width: "100%"}}>
       <Link href="./">
         <a style={{ display: 'flex', alignItems: 'center', color: "white" }}>
-          <TitleLogo size="3rem" /> <span style={{marginLeft:"10px"}}>Jinx Coffeehouse</span>
+          <TitleLogo size="3rem" /> <span style={{marginLeft:"10px", minWidth: "max-content"}}>Jinx Coffeehouse</span>
         </a>
       </Link>
     </Div1>
@@ -22,18 +22,13 @@ const Header = () => (
           <NavLink>Menu</NavLink>
         </Link>
       </NavLinkLi>
-      {/*
-      <NavLinkLi>
-        <Link href="#space">
-          <NavLink>The Space</NavLink>
-        </Link>
-      </NavLinkLi>
-      */}        
       <NavLinkLi>
         <Link href="#about">
           <NavLink>About Us</NavLink>
         </Link>
-      </NavLinkLi>        
+      </NavLinkLi>
+      <NavLinkLi />
+      <NavLinkLi />   
     </Div2>
       <Div3>
         <SocialIcons href="https://www.instagram.com/jinxcoffeehouse/">

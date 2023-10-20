@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Img = styled.img`
-  min-width: 180px;
-  width: 180px;
-  min-height: 180px;
-  height: 180px;
+  min-width: ${(props) => props.theme.image.menuImageSizing};
+  width: ${(props) => props.theme.image.menuImageSizing};
+  min-height: ${(props) => props.theme.image.menuImageSizing};
+  height: ${(props) => props.theme.image.menuImageSizing};
   object-fit: cover;
   overflow: hidden;
 `
@@ -25,38 +25,46 @@ export const GridContainer = styled.section`
 `
 
 export const MenuItemCard = styled.div`
+  overflow: hidden;
   border-radius: 1rem;
   box-shadow: 2px 2px 6px ${(props) => props.theme.colors.palette5Half};
   display: inline-flex;
   text-align: center;
   width: 100%;
-  height: 180px;
+  height: ${(props) => props.theme.image.menuImageSizing};
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
 `;
 
 export const MenuItemCardRight = styled.div`
+  overflow: hidden;
   width: 100%
 `;
 
 export const TitleContent = styled.div`
+  overflow: hidden;
   text-align: center;
   z-index: 20;
   width: 100%;
-  padding: 2rem 0px 0.5rem 0px
+  padding: 1vh 0px 0.5rem 0px
 `;
 
 
 export const HeaderThree = styled.h3`
+  overflow: hidden;
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: .5rem 0;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  font-size: ${(props) => props.title ? '6vw' : '4vw'};
+  @media (min-width: 768px) {
+    font-size: ${(props) => props.title ? '1.6vw' : '1.2vw'};
+  }
 `;
 
 export const Hr = styled.hr`
+  overflow: hidden;
   width: 50px;
   height: 3px;
   margin: 6px auto 10px auto;
