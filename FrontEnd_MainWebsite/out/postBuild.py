@@ -12,6 +12,17 @@ with open("./404.html", "r") as f:
      fourOhFourHTML = f.read()
      f.close()
 
+def ReplaceNextRefInFile(file):
+     fileData = None
+     print("ReplaceNextRefInFile(): " + file)
+     with open(file, "r") as f:
+          fileData = f.read()
+          f.close()
+     fileData = fileData.replace('/_next', './next')
+     with open(file, 'w') as f:
+          f.write(fileData)
+          f.close()
+
 #  Change all references in the HTML from /_next to /next
 indexHTML = indexHTML.replace('/_next', './next')
 fourOhFourHTML = fourOhFourHTML.replace('/_next', './next')
@@ -35,6 +46,8 @@ for dirpath, dirs, files in os.walk("."):
                indexHTML = indexHTML.replace(forwardSlash1, forwardSlash2)
                fourOhFourHTML = fourOhFourHTML.replace(dirpath + "\\" +  file, dirpath + "\\" +  file[1:len(file)])
                fourOhFourHTML = fourOhFourHTML.replace(forwardSlash1, forwardSlash2)
+          if (file[0:4] == "main"):
+               ReplaceNextRefInFile(dirpath + "\\" +  file)
 
 #  Write the altered data back to the index HTML file
 with open("./index.html", 'w') as f:
